@@ -1,0 +1,1 @@
+int addFunc(int firstInt, int secondInt, char *path);

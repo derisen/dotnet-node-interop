@@ -1,0 +1,19 @@
+{
+  "name": "addon-sum",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "generate": "cd ../dotnet-native-lib && dotnet publish /p:NativeLib=Shared -r win-x64 -c Release",
+    "copy": "copy ../dotnet-native-lib/bin/Release/net7.0/win-x64/publish/NativeLibrary.dll ./lib",
+    "compile": "node-gyp clean && node-gyp configure && node-gyp build",
+    "preinstall": "npm run compile",
+    "start": "node index.js"
+  },
+  "author": "derisen",
+  "license": "ISC",
+  "dependencies": {
+    "bindings": "^1.5.0",
+    "node-addon-api": "^6.0.0"
+  }
+}

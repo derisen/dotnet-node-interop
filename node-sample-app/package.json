@@ -1,0 +1,14 @@
+{
+  "name": "sample-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "addon": "file:../node-addon-sum/addon-sum-1.0.0.tgz"
+  },
+  "author": "derisen",
+  "license": "ISC"
+}
